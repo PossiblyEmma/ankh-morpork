@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+# Ankh-Morpork
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**_Discworld: Ankh-Morpork_** is a board game by Martin Wallace and Treefrog Games set
+in Terry Pratchett's Discworld. It is by far my favourite board game, but
+unfortunately it was only printed between 2011–2015, so it's hard to come by. As
+my copy is starting to show the wear and tear of years of use, I wanted to take
+some steps to preserve the game in a digital format, so that hopefully it won't
+be lost.
 
-Currently, two official plugins are available:
+This is going to be a long project, most likely, so the current priority is
+simply to capture the game rules and contents. Other considerations like making
+it look good or be playable in anything other than a test state will come later.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```zsh
+npm i
+npm run dev
 ```
