@@ -1,7 +1,7 @@
 import { Board } from "./board";
 import { Client } from "boardgame.io/react";
 import type { Game } from "boardgame.io";
-import { GameState } from "./types";
+import { GameState } from "./gamestate";
 import { moves } from "./moves";
 import { setup } from "./setup";
 

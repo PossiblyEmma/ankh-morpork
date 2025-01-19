@@ -1,5 +1,5 @@
 import { FnContext } from "boardgame.io";
-import { GameState } from "../../types";
+import { GameState } from "../../gamestate";
 import { changeDollars } from "./changeDollars";
 
 describe("changeDollars", () => {

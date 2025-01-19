@@ -1,5 +1,5 @@
 import { BoardProps } from "boardgame.io/dist/types/packages/react";
-import { GameState } from "../types";
+import { GameState } from "../gamestate";
 import { MovesWithoutContext } from "../moves";
 
 type Props = BoardProps<GameState> & { moves: MovesWithoutContext };

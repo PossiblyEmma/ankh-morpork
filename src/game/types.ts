@@ -1,13 +1,4 @@
-import { FnContext, Game } from "boardgame.io";
-
-export interface GameState extends Game {
-  players: Record<string, Player>;
-}
-
-export type Player = {
-  dollars: number;
-  hand: unknown[]; //TODO: This will be Card[] type
-};
+import { FnContext } from "boardgame.io";
 
 /**
  * Sometimes, we need to omit the context passed as the first argument to a
