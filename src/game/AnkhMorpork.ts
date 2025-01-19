@@ -1,12 +1,13 @@
+import { Board } from "./board";
 import { Client } from "boardgame.io/react";
 import type { Game } from "boardgame.io";
 import { GameState } from "./types";
-import { changeDollars } from "./moves";
+import { moves } from "./moves";
 import { setup } from "./setup";
 
 const AnkhMorpork: Game<GameState> = {
   setup,
-  moves: { changeDollars },
+  moves,
 };
 
-export const GameClient = Client({ game: AnkhMorpork });
+export const GameClient = Client({ game: AnkhMorpork, board: Board });
