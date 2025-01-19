@@ -1,4 +1,4 @@
-import { GameState, Player } from "./gamestate";
+import { GameState, Player, setupAreas } from "./gamestate";
 
 export function setup(): GameState {
   // For now, just initialise with 2 players with empty hands
@@ -7,6 +7,7 @@ export function setup(): GameState {
     0: { ...initialPlayerState },
     1: { ...initialPlayerState },
   };
+  const areas = setupAreas();
 
-  return { players };
+  return { areas, players };
 }
