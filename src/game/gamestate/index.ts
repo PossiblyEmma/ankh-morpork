@@ -11,3 +11,4 @@ export type Player = {
 };
 
 export { setupAreas } from "./Areas";
+export { PlayerColour } from "./PlayerColour";
