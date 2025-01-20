@@ -1,5 +1,5 @@
 import { FnContext } from "boardgame.io";
-import { PlayerColour } from "../../gamestate/PlayerColour";
+import { PlayerColour } from "../../../gamestate";
 
 type ChangeDollarsArgs = { playerColour: PlayerColour; value: number };
 

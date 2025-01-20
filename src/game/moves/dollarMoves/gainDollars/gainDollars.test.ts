@@ -1,4 +1,4 @@
-import { GameState, PlayerColour } from "../../gamestate";
+import { GameState, PlayerColour } from "../../../gamestate";
 
 import { FnContext } from "boardgame.io";
 import { gainDollars } from "./gainDollars";
