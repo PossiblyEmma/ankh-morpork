@@ -1,13 +1,12 @@
+import { MinionType, NeutralMinionType } from "./MinionType";
+
 import { PlayerColour } from "./PlayerColour";
 
 export type AreaNumber = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 export type Area = {
   name: string;
-  minions: { [colour in PlayerColour]: number } & {
-    demon: number;
-    troll: number;
-  };
+  minions: { [minionType in MinionType]: number };
   building: PlayerColour | null;
   trouble: boolean;
   cost: number;
@@ -24,8 +23,8 @@ function getEmptyMinions(): Area["minions"] {
     [PlayerColour.GREEN]: 0,
     [PlayerColour.RED]: 0,
     [PlayerColour.YELLOW]: 0,
-    demon: 0,
-    troll: 0,
+    [NeutralMinionType.DEMON]: 0,
+    [NeutralMinionType.TROLL]: 0,
   };
 }
 
