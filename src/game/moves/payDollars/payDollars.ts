@@ -3,7 +3,7 @@ import { GameState, PlayerColour } from "../../gamestate";
 import { FnContext } from "boardgame.io";
 import { changeDollars } from "../changeDollars/changeDollars";
 
-type GainDollarsArgs = {
+type PayDollarsArgs = {
   playerColour: PlayerColour;
   value: number;
   allowUnderpayment?: boolean;
@@ -11,7 +11,7 @@ type GainDollarsArgs = {
 
 export function payDollars(
   context: FnContext<GameState>,
-  args: GainDollarsArgs
+  args: PayDollarsArgs
 ): void {
   const { G } = context;
   const { playerColour, value, allowUnderpayment } = args;

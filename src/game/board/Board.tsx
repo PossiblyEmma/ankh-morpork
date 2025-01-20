@@ -1,5 +1,6 @@
+import { GameState, PlayerColour } from "../gamestate";
+
 import { BoardProps } from "boardgame.io/dist/types/packages/react";
-import { GameState } from "../gamestate";
 import { MovesWithoutContext } from "../moves";
 
 type Props = BoardProps<GameState> & { moves: MovesWithoutContext };
@@ -9,10 +10,18 @@ export function Board(props: Props) {
 
   return (
     <>
-      <button onClick={() => moves.changeDollars({ playerId: "0", value: 1 })}>
+      <button
+        onClick={() =>
+          moves.gainDollars({ playerColour: PlayerColour.GREEN, value: 1 })
+        }
+      >
         Give dollar
       </button>
-      <button onClick={() => moves.changeDollars({ playerId: "0", value: -1 })}>
+      <button
+        onClick={() =>
+          moves.payDollars({ playerColour: PlayerColour.GREEN, value: 1 })
+        }
+      >
         Pay dollar
       </button>
     </>
